@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./components/Navbar"
+import Main from "./components/Main"
+import Agenda from "./components/Agenda"
+import Contact from "./components/Contact"
+import Politici from "./components/Politici"
+import Stand from "./components/Stand"
+import Jur from "./programma/Juridisch"
+import Sec from "./programma/Seconomisch"
+import Cult from "./programma/Scultureel"
 
-function App() {
+export function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+        <Navbar />
+          <Main />
+          <Agenda />
+          <Politici />
+          <Stand />
+          <Contact />
+      </div>
   );
 }
 
-export default App;
+export function Juridisch(){
+  return(
+    <div>
+      <Jur />
+    </div>
+  )
+}
+
+export function Seconomisch(){
+  return(
+    <div>
+    <Sec />
+    </div>
+  )
+}
+
+export function Scultureel(){
+  return(
+    <div>
+      <Cult />
+    </div>
+  )
+}
+
